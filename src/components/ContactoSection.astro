@@ -8,8 +8,7 @@ import Title from "./Title.astro";
             <Title titulo="Contacto" color="text-firstColor" size="text-6xl"/>
             <p class="absolute bottom-7 text-xs font-bebas text-firstColor tracking-[0.1px] z-20 left-[2px]">después veo si te respondo, abrazo máquina!</p>
             </header>
-
-        <form action="" class="flex flex-col gap-5 [&>div>input]:outline-none [&>div>input]:max-w-[600px]">
+        <form action="" class="flex flex-col gap-5 [&>div>input]:outline-none [&>div>input]:max-w-[600px] [&>div>input]:rounded-none">
             <div class="flex flex-col">
                 <label for="Nombre" class="font-bebas text-2xl text-firstColor">Nombre completo</label>
                 <input type="text" name="Nombre" id="" placeholder="Alberto Fernandez" class="p-2 bg-transparent border-[1px] border-firstColor placeholder:text-firstColor/25 font-extralight">
@@ -30,7 +29,7 @@ import Title from "./Title.astro";
             <h3 class="text-firstColor font-bebas text-2xl pt-5">Mis redes sociales</h3>
         </footer>
     </aside>
-    <aside class="w-[50%] bg-firstColor bg-dager bg-no-repeat bg-cover">
+    <aside class="w-[50%] bg-firstColor bg-dager bg-no-repeat bg-cover hidden md:block">
         <h3 class="p-10 text-white/50 text-xl">onlyfans.com/elñinodager</h3>
     </aside>
 </section>
