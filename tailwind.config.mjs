@@ -12,7 +12,7 @@ export default {
         '2xl': '1536px', // Escritorios grandes
       },
       colors: {
-        'firstColor': '#180F22',
+        'firstColor': '#0E1B29',
         'secondColor': "#FFED89",
         'thirdColor': '#f3f3f3',
       },
