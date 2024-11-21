@@ -1,0 +1,42 @@
+---
+import Title from "./Title.astro";
+---
+
+<section class="w-screen  relative flex">
+    <aside class="w-screen md:w-[50%] bg-thirdColor px-5 pt-5 md:pl-40 lg:pl-60 md:pt-10 pb-20">
+        <header class="relative flex items-center">
+            <Title titulo="Contacto" color="text-firstColor" size="text-6xl"/>
+            <p class="absolute bottom-7 text-xs font-bebas text-firstColor tracking-[0.1px] z-20 left-[2px]">después veo si te respondo, abrazo máquina!</p>
+            </header>
+
+        <form action="" class="flex flex-col gap-5 [&>div>input]:outline-none [&>div>input]:max-w-[600px]">
+            <div class="flex flex-col">
+                <label for="Nombre" class="font-bebas text-2xl text-firstColor">Nombre completo</label>
+                <input type="text" name="Nombre" id="" placeholder="Alberto Fernandez" class="p-2 bg-transparent border-[1px] border-firstColor placeholder:text-firstColor/25 font-extralight">
+            </div>
+
+            <div class="flex flex-col">
+                <label for="Email" class="font-bebas text-2xl text-firstColor">Email</label>
+                <input type="email" name="Email" id="" placeholder="BetoGoloson@gmail.com" class="p-2 bg-transparent border-[1px] border-firstColor placeholder:text-firstColor/25 font-extralight">
+            </div>
+
+            <div class="flex flex-col">
+                <label for="Mensaje" class="font-bebas text-2xl text-firstColor">Mensaje</label>
+                <textarea name="Mensaje" id="" placeholder="Hola, mi nombre es Alberto y me quiero comunicar por un combo SashaFerro-Diaz..." class="p-2 bg-transparent border-[1px] border-firstColor placeholder:text-firstColor/25 font-extralight min-h-52 text-start outline-none max-w-[600px]" />
+            </div>
+            <button onsubmit="submite" class="bg-firstColor text-white text-center font-bebas py-1 text-2xl max-w-[600px]">Enviar</button>
+        </form>
+        <footer>
+            <h3 class="text-firstColor font-bebas text-2xl pt-5">Mis redes sociales</h3>
+        </footer>
+    </aside>
+    <aside class="w-[50%] bg-firstColor bg-dager bg-no-repeat bg-cover">
+        <h3 class="p-10 text-white/50 text-xl">onlyfans.com/elñinodager</h3>
+    </aside>
+</section>
+
+<style>
+textarea {
+    resize: none;
+}
+</style>

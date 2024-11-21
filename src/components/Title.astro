@@ -1,0 +1,10 @@
+---
+const { titulo, color, size } = Astro.props;
+---
+
+<header class={`relative ${color} text-firstColor font-bebas [&>h1]:select-none pb-10`}>
+        <h1 class={`${size} font-bold relative z-20`}>{titulo}</h1>
+        <h1 class={`${size} font-bold text-gray-400 absolute left-0 top-3 rotate-[5deg] transform opacity-40 scale-y-[-1] z-10`}>
+            {titulo}
+        </h1>
+</header>
