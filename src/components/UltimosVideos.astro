@@ -1,24 +1,33 @@
 ---
-import Title from "./Title.astro";
+import CardVideo from './CardVideo.astro';
+import Title from './Title.astro';
+import Youtube from './Youtube.astro';
+const videos = [
+  {
+    'link': 'https://www.youtube.com/embed/YQfRVo5UwOM',
+    'titulo': 'Cómo estudiar (pero bien).',
+    'canal': 'Dot Dager'
+  },
+  {
+    'link': 'https://www.youtube.com/embed/FMfLfYus6Yc',
+    'titulo': 'No seas tan programador.',
+    'canal': 'Dot Dager'
+  },
+  {
+    'link': 'https://www.youtube.com/embed/wE8JU_tN04Q',
+    'titulo': 'Forobardo de la semana: "Los recruiters ganan 10 veces mas que un programador."',
+    'canal': 'Dot Dager'
+  },
+]
 ---
 
 <section class="md:px-40 lg:px-60 pt-20 bg-firstColor w-screen px-5">
-    <Title titulo="últimos vídeos" color="text-white" size="text-4xl"/>
-    <div class="flex justify-between md:items-center flex-wrap flex-col md:flex-row">
-        <article class="">
-            <iframe src="https://www.youtube.com/embed/YQfRVo5UwOM" class="h-60 w-full lg:w-[22vw]"></iframe>
-            <h1 class="font-bebas text-2xl text-white p-2">Cómo estudiar (pero bien).</h1>
-            <h3 class="text-white font-bebas p-2">DotDager</h3>
-        </article>
-        <article class="">
-        <iframe src="https://www.youtube.com/embed/FMfLfYus6Yc" class="h-60 w-full lg:w-[22vw]"></iframe>
-            <h1 class="font-bebas text-2xl text-white p-2">No seas tan programador.</h1>
-            <h3 class="text-white font-bebas p-2">DotDager</h3>
-        </article>
-        <article class="">
-            <iframe src="https://www.youtube.com/embed/wE8JU_tN04Q" class="h-60 w-full lg:w-[22vw]"></iframe>
-            <h1 class="font-bebas text-2xl text-white p-2">Forobardo de la semana</h1>
-            <h3 class="text-white font-bebas p-2">DotDager</h3>
-        </article>
-    </div>
+  <Title titulo="últimos vídeos" color="text-white" size="text-4xl" />
+  <div class="flex justify-between flex-wrap flex-col md:flex-row">
+    {
+      videos.map( (video) => (
+        <CardVideo link={video.link} titulo={video.titulo} canal={video.canal}/>
+      ))
+    }
+  </div>
 </section>

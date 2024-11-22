@@ -1,44 +1,45 @@
 ---
-import Menu from "./Menu.astro";
+import Menu from './Menu.astro';
 ---
 
-<nav class="absolute px-5 pt-10 md:px-24 lg:px-32 xl:px-60 md:pt-20 w-screen flex justify-between items-center text-3xl text-white">
-    <a href="/" class=""><span class="text-secondColor">.</span>dagger</a>
-    <ul class="gap-5 hidden lg:flex">
-        <li>
-            <a href="/" class="hover:opacity-75 transition-opacity">Inicio</a>
-        </li>
-        <li>
-            <a href="/" class="hover:opacity-75 transition-opacity">Sobre mí</a>
-        </li>
-        <li>
-            <a href="/" class="hover:opacity-75 transition-opacity">Contenido</a>
-        </li>
-        <li>
-            <a href="/" class="hover:opacity-75 transition-opacity">contacto</a>
-        </li>
-        <li>
-            <a href="/lumberjack" target="_blank" class="hover:opacity-75 transition-opacity">
-                <h3 class="absolute text-secondColor">lumberjack</h3>
-                <h3 class="relative right-[2px] bottom-[2px] text-white/30">lumberjack</h3>
-            </a>
-        </li>
-    </ul>
-    <button class="lg:hidden">
-        <Menu />
-    </button>
+<nav
+  class="absolute px-5 pt-10 md:px-24 lg:px-32 xl:px-60 md:pt-20 w-screen flex justify-between items-center text-3xl text-white">
+  <a href="/" class=""><span class="text-secondColor">.</span>dagger</a>
+  <ul class="gap-5 hidden lg:flex">
+    <li>
+      <a href="/" class="hover:opacity-75 transition-opacity">Inicio</a>
+    </li>
+    <li>
+      <a href="/" class="hover:opacity-75 transition-opacity">Sobre mí</a>
+    </li>
+    <li>
+      <a href="/" class="hover:opacity-75 transition-opacity">Contenido</a>
+    </li>
+    <li>
+      <a href="/" class="hover:opacity-75 transition-opacity">contacto</a>
+    </li>
+    <li>
+      <a href="/lumberjack" target="_blank" class="hover:opacity-75 transition-opacity">
+        <h3 class="absolute text-secondColor">lumberjack</h3>
+        <h3 class="relative right-[2px] bottom-[2px] text-white/30">lumberjack</h3>
+      </a>
+    </li>
+  </ul>
+  <button class="lg:hidden">
+    <Menu />
+  </button>
 </nav>
 
 <script>
-  const menu = document.querySelector("#menu");
+  const menu = document.querySelector('#menu');
   menu.addEventListener('click', () => {
     alert('hola');
   });
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-nav {
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+  nav {
     font-family: 'Bebas Neue';
-}
+  }
 </style>

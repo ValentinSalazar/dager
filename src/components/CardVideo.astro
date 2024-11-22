@@ -1,0 +1,20 @@
+---
+const { link, titulo, canal } = Astro.props;
+import Youtube from "./Youtube.astro";
+---
+
+<article>
+    <iframe
+        src=`${link}`
+        class="h-60 w-full lg:w-[22vw]"
+    >
+    </iframe>
+    <h1 class="font-bebas text-2xl text-white p-2 lg:max-w-[22vw] text-balance">
+        {titulo}
+    </h1>
+    <a
+        href="https://www.youtube.com/@DagerLive"
+        class="text-white font-bebas p-2 flex items-center gap-2 w-fit hover:opacity-75 active:opacity-50 transition-opacity duration-200"
+        ><Youtube ancho="32" alto="20" />{canal}</a
+    >
+</article>

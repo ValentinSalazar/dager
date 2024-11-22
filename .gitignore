@@ -1,5 +1,6 @@
 # build output
 dist/
+.zed
 
 # generated types
 .astro/

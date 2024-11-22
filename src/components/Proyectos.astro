@@ -1,25 +1,34 @@
 ---
-import Title from "./Title.astro";
+import CardVideo from './CardVideo.astro';
+import Title from './Title.astro';
+
+const proyectos = [
+  {
+    'link': 'https://www.youtube.com/embed/Up3kE_jXyZ4',
+    'titulo': 'Dager te enseña a hacer un server DNS.',
+    'canal': 'Dager Clips'
+  },
+  {
+    'link': 'https://www.youtube.com/embed/hnXqEU51Efg',
+    'titulo': 'El "Hola Mundo" más dificil del mundo.',
+    'canal': 'Dager Clips'
+  },
+  {
+    'link': 'https://www.youtube.com/embed/OnNW8dbHFno',
+    'titulo': 'Programando pero solamente puedo usar tecnologías con A | AAAA stack 1',
+    'canal': 'Dager Clips'
+  },
+]
+
 ---
 
 
 <section class="md:px-40 lg:px-60 pt-20 bg-firstColor w-screen px-5 md:pb-20">
-    <Title titulo="Proyectos en vivo" color="text-white" size="text-4xl"/>
-    <div class="flex justify-between md:items-center flex-wrap flex-col md:flex-row">
-        <article class="">
-            <iframe src="https://www.youtube.com/embed/YQfRVo5UwOM" class="h-60 w-full lg:w-[22vw]"></iframe>
-            <h1 class="font-bebas text-2xl text-white p-2">Cómo estudiar (pero bien).</h1>
-            <h3 class="text-white font-bebas p-2">DotDager</h3>
-        </article>
-        <article class="">
-        <iframe src="https://www.youtube.com/embed/FMfLfYus6Yc" class="h-60 w-full lg:w-[22vw]"></iframe>
-            <h1 class="font-bebas text-2xl text-white p-2">No seas tan programador.</h1>
-            <h3 class="text-white font-bebas p-2">DotDager</h3>
-        </article>
-        <article class="">
-            <iframe src="https://www.youtube.com/embed/wE8JU_tN04Q" class="h-60 w-full lg:w-[22vw]"></iframe>
-            <h1 class="font-bebas text-2xl text-white p-2">Forobardo de la semana</h1>
-            <h3 class="text-white font-bebas p-2">DotDager</h3>
-        </article>
-    </div>
+  <Title titulo="Proyectos en vivo" color="text-white" size="text-4xl" />
+  <div class="flex justify-between gap-14 md:gap-0 flex-wrap flex-col md:flex-row">
+    {
+      proyectos.map( (proyecto) => (
+        <CardVideo link={proyecto.link} titulo={proyecto.titulo} canal={proyecto.canal}/>
+      ))
+    }
 </section>

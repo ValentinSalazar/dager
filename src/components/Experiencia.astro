@@ -1,40 +1,157 @@
-<section class="bg-firstColor md:px-40 lg:px-60 md:gap-5 w-screen pb-5 p-5 md:p-0">
-        <div class="w-full flex justify-between flex-wrap md:flex-nowrap gap-5 md:gap-3 [&>article>h3]:text-lg [&>article>p]:text-white [&>article>p]:text-xs [&>article>p]:font-extralight [&>article>i]:font-extralight [&>article>i]:text-white [&>article>i]:text-xs">
-            <article class="bg-firstColor flex flex-col gap-2 relative w-[40%]">
-                <header class="flex items-center gap-2">
-                    <img src="/university_of_nebraska_lincoln_logo.jpeg" alt="" width="20">
-                    <h3 class="text-white font-bebas tracking-wide relative top-[1.2px]">University of Nebraska</h3>
-                </header>
-                <h4 class="text-sm text-secondColor">Leader Developer</h4>
-                <p class="text-balance max-h-60">Full-stack (.NET, Java, MySQL, AWS) software development, dev team leading & systems design consulting</p>
-                <i>Dic. 2020 hasta actualidad</i>
-            </article>
-            <article class="bg-firstColor flex flex-col gap-2">
-                <header class="flex items-center gap-2">
-                    <img src="/grupo-alpha.jpeg" alt="" width="20">
-                    <h3 class="text-white font-bebas tracking-wide relative top-[1.2px]">Grupo Alpha</h3>
-                </header>
-                <h4 class="text-secondColor text-sm">Software Developer</h4>
-                <p class="text-balance underline">ver detalles</p>
-                <i class="pt-[14px]">Dic. 2020 hasta actualidad</i>
-            </article>
-            <article class="bg-firstColor flex flex-col gap-2">
-                <header class="flex items-center gap-2">
-                    <img src="/" alt="" width="20">
-                    <h3 class="text-white font-bebas tracking-wide relative top-[1.2px]">Freelance</h3>
-                </header>
-                <h4 class="text-secondColor text-sm">Software Developer</h4>
-                <p class="text-balance underline">ver detalles</p>
-                <i class="pt-[14px]">Dic. 2020 hasta actualidad</i>
-            </article>
-            <article class="bg-firstColor flex flex-col gap-2">
-                <header class="flex items-center gap-2">
-                    <img src="/atento_logo.jpeg" alt="" width="20">
-                    <h3 class="text-white font-bebas tracking-wide relative top-[1.2px]">Atento</h3>
-                </header>
-                <h4 class="text-secondColor text-sm">Help Desk Technician</h4>
-                <p class="text-balance underline cursor-pointer w-fit">ver detalles</p>
-                <i class="pt-[14px]">Ago. 2017 hasta Dic. 2018</i>
-            </article>
-        </div>
+---
+import Remoto from "./Remoto.astro";
+---
+
+<section class="bg-firstColor md:gap-5 w-screen pb-5 p-5 sm:px- md:px-28 lg:px-32 xl:px-60 md:p-0">
+  <div
+    class="w-full flex flex-col lg:flex-row justify-between flex-wrap md:flex-nowrap gap-5 md:gap-3 [&>article>h3]:text-lg [&>article>p]:text-white [&>article>p]:text-xs [&>article>p]:font-extralight [&>article>i]:font-extralight [&>article>i]:text-white [&>article>i]:text-xs"
+  >
+    <article class="bg-firstColor flex flex-col gap-2 relative lg:w-[40%]">
+      <header class="flex items-center gap-2">
+        <img
+          src="/university_of_nebraska_lincoln_logo.jpeg"
+          alt=""
+          width="20"
+        />
+        <h3 class="text-white font-bebas tracking-wide relative top-[1.2px]">
+          University of Nebraska
+        </h3>
+      </header>
+      <h4 class="text-sm text-secondColor">Leader Developer</h4>
+      <p id="detalles_experiencia" class="text-balance">
+        Full-stack (.NET, Java, MySQL, AWS) software development, dev team
+        leading & systems design consulting
+      </p>
+      <i>Dic. 2020 hasta actualidad</i>
+    </article>
+    <article class="bg-firstColor flex flex-col gap-2">
+      <header class="flex items-center gap-2">
+        <img src="/grupo-alpha.jpeg" alt="" width="20" />
+        <h3 class="text-white font-bebas tracking-wide relative top-[1.2px]">
+          Grupo Alpha
+        </h3>
+      </header>
+      <h4 class="text-secondColor text-sm">Software Developer</h4>
+      <p id="detalles_experiencia" class="text-balance underline max-h-60">
+        ver detalles
+      </p>
+      <i class="pt-[14px]">Dic. 2020 hasta actualidad</i>
+    </article>
+    <article class="bg-firstColor flex flex-col gap-2">
+      <header class="flex items-center gap-2">
+        <Remoto />
+        <h3 class="text-white font-bebas tracking-wide relative top-[1.2px]">
+          Freelance
+        </h3>
+      </header>
+      <h4 class="text-secondColor text-sm">Software Developer</h4>
+      <p id="detalles_experiencia" class="text-balance underline max-h-60">
+        ver detalles
+      </p>
+      <i class="pt-[14px]">Dic. 2020 hasta actualidad</i>
+    </article>
+    <article class="bg-firstColor flex flex-col gap-2">
+      <header class="flex items-center gap-2">
+        <img src="/atento_logo.jpeg" alt="" width="20" />
+        <h3 class="text-white font-bebas tracking-wide relative top-[1.2px]">
+          Atento
+        </h3>
+      </header>
+      <h4 class="text-secondColor text-sm">Help Desk Technician</h4>
+      <p
+        id="detalles_experiencia"
+        class="text-balance underline cursor-pointer max-h-60"
+      >
+        ver detalles
+      </p>
+      <i class="pt-[14px]">Ago. 2017 hasta Dic. 2018</i>
+    </article>
+  </div>
 </section>
+
+<script>
+  // @ts-nocheck
+  const detalles_experiencia = document.querySelectorAll("#detalles_experiencia");
+  const textos_experiencias = ["Full-stack (.NET, Java, MySQL, AWS) software development, dev team leading & systems design consulting","beton", "Full-stack software development and general IT consulting, especially around optimization and automation of processes", "Remote help desk support for one of the largest telecom companies in Argentina. Issues were broad, ranging from VoIP and Internet/Wi-Fi, to general networking and router config CATV, DTV, UHF TV"];
+  const ver_detalles = "ver detalles";
+
+  detalles_experiencia[0].addEventListener("click", () => {
+    if(detalles_experiencia[0].innerText == ver_detalles) {
+      detalles_experiencia[0].innerText = textos_experiencias[0];
+      detalles_experiencia[0].parentElement.classList.add("lg:w-[40%]");
+      detalles_experiencia[0].classList.remove('underline');
+      detalles_experiencia[0].classList.remove('cursor-pointer');
+      
+      for(let i = 1; i < detalles_experiencia.length; i++){
+        detalles_experiencia[i].innerText = ver_detalles;
+        detalles_experiencia[i].parentElement.classList.remove("lg:w-[40%]");
+        detalles_experiencia[i].classList.add("underline");
+        detalles_experiencia[i].classList.add("cursor-pointer");
+      }
+    }
+  });
+
+  detalles_experiencia[3].addEventListener("click", () => {
+    if(detalles_experiencia[3].innerText == ver_detalles){
+      detalles_experiencia[3].innerText = textos_experiencias[3];
+      detalles_experiencia[3].classList.remove('underline');
+      detalles_experiencia[3].parentElement.classList.add("lg:w-[40%]");
+      detalles_experiencia[3].classList.remove('cursor-pointer');
+      detalles_experiencia[3].classList.add('max-h-60');
+
+      detalles_experiencia[0].parentElement.classList.remove("lg:w-[40%]");
+      detalles_experiencia[0].innerText = ver_detalles;
+      detalles_experiencia[0].classList.add('underline');
+
+      detalles_experiencia[1].parentElement.classList.remove("lg:w-[40%]");
+      detalles_experiencia[1].innerText = ver_detalles;
+      detalles_experiencia[1].classList.add('underline');
+
+      detalles_experiencia[2].parentElement.classList.remove("lg:w-[40%]");
+      detalles_experiencia[2].innerText = ver_detalles;
+      detalles_experiencia[2].classList.add('underline');
+      
+
+    }
+  })
+
+  detalles_experiencia[2].addEventListener("click", () => {
+    if(detalles_experiencia[2].innerText == ver_detalles){
+      detalles_experiencia[2].innerText = textos_experiencias[2];
+      detalles_experiencia[2].classList.remove('underline');
+      detalles_experiencia[2].parentElement.classList.add("lg:w-[40%]");
+
+      detalles_experiencia[0].parentElement.classList.remove("lg:w-[40%]");
+      detalles_experiencia[0].innerText = ver_detalles;
+      detalles_experiencia[0].classList.add('underline');
+
+      detalles_experiencia[1].parentElement.classList.remove("lg:w-[40%]");
+      detalles_experiencia[1].innerText = ver_detalles;
+      detalles_experiencia[1].classList.add('underline');
+
+      detalles_experiencia[3].parentElement.classList.remove("lg:w-[40%]");
+      detalles_experiencia[3].innerText = ver_detalles;
+      detalles_experiencia[3].classList.add('underline');
+    }
+  })
+
+  detalles_experiencia[1].addEventListener("click", () => {
+    if(detalles_experiencia[1].innerText == ver_detalles){
+      detalles_experiencia[1].innerText = textos_experiencias[2];
+      detalles_experiencia[1].classList.remove('underline');
+      detalles_experiencia[1].parentElement.classList.add("lg:w-[40%]");
+
+      detalles_experiencia[0].parentElement.classList.remove("lg:w-[40%]");
+      detalles_experiencia[0].innerText = ver_detalles;
+      detalles_experiencia[0].classList.add('underline');
+
+      detalles_experiencia[2].parentElement.classList.remove("lg:w-[40%]");
+      detalles_experiencia[2].innerText = ver_detalles;
+      detalles_experiencia[2].classList.add('underline');
+
+      detalles_experiencia[3].parentElement.classList.remove("lg:w-[40%]");
+      detalles_experiencia[3].innerText = ver_detalles;
+      detalles_experiencia[3].classList.add('underline');
+    }
+  })
+</script>

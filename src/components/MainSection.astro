@@ -1,23 +1,36 @@
+---
+import Youtube from "./Youtube.astro";
+---
 
-<main class="h-[90vh] md:h-screen w-screen px-5 pt-10 md:px-28 lg:px-32 xl:px-60 md:pt-20 flex justify-center flex-col">
-    <header class="">
-        <h3 class="text-2xl font-extralight text-secondColor selection:bg-firstColor relative z-20">
-            qué onda bro? soy
-            <span class="relative">
-                <span class="opacity-50">khea</span>
-                <span class="left-0 top-4 w-14 h-[2px] rotate-[10deg] bg-white absolute"></span>
-            </span>
-        </h3>
-        <h1 class="text-white font-bebas xs:text-[4.5rem] text-[6rem] md:text-[7rem] lg:text-[10rem] xl:text-[12rem] leading-none selection:text-secondColor">MARIANO VILLA</h1>
-        <p class="text-secondColor font-extralight md:text-xl bottom-2 md:bottom-2 lg:bottom-4 selection:bg-firstColor md:bg-firstColor w-fit relative z-20">FullStack Senior graduado de Soy Henry, <br class="lg:hidden"/>mentira ni loko pago 4k verdes, abrazo.</p>
-    </header>
-    <footer class="absolute bottom-20">
-        <h3 class="text-white font-extralight">vení deslizá que te cuento</h3>
-        <h1 class="font-bebas text-white text-4xl">quién carajos soy</h1>
-    </footer>
+<main
+  class="h-[90vh] md:h-screen w-screen px-5 pt-10 md:px-28 lg:px-32 xl:px-60 md:pt-20 flex justify-center flex-col">
+  <header class="lg:pb-14">
+    <h3 class="md:text-xl font-extralight text-secondColor selection:bg-firstColor relative z-20">
+      qué onda bro? soy
+      <span class="relative">
+        <span class="opacity-50">khea</span>
+        <span class="left-0 top-4 w-14 h-[2px] rotate-[10deg] bg-white absolute"></span>
+      </span>
+    </h3>
+    <h1
+      class="text-white font-bebas xs:text-[4.5rem] text-[6rem] md:text-[7rem] lg:text-[10rem] xl:text-[12rem] leading-none selection:text-secondColor z-20">
+      MARIANO VILLA
+    </h1>
+    <p
+      class="text-secondColor font-extralight md:text-xl bottom-2 md:bottom-2 lg:bottom-4 selection:bg-firstColor md:bg-firstColor w-fit relative z-20">
+      FullStack Senior graduado de Soy Henry, <br class="lg:hidden" />mentira ni loko pago 4k
+      verdes, abrazo.
+    </p>
+    <a href="https://www.youtube.com/@DotDager" target="_blank" class="text-white flex items-center gap-2 w-fit hover:opacity-75 active:opacity-50 py-5 lg:py-0 font-bebas text-xl"><Youtube ancho="32" alto="24"/>Dot Dager</a>
+  </header>
+  <footer class="absolute bottom-20">
+    <h3 class="text-white font-extralight">vení deslizá que te cuento</h3>
+    <h1 class="font-bebas text-white text-4xl">quién carajos soy</h1>
+  </footer>
+  <img src="dager.png" alt="Foto de Mariano Luis Villa, mas conocido como Dot Dager" class="absolute right-[-20%] bottom-20 lg:bottom-0 w-[75%] lg:w-[50%] select-none z-10">
 </main>
 <style>
-    main {
-        background-image: linear-gradient(to bottom, #c86b6b, #99526e, #634164, #322f4b, #0e1b29);
-    }
+  main {
+    background-image: linear-gradient(to bottom, #c86b6b, #99526e, #634164, #322f4b, #0e1b29);
+  }
 </style>
