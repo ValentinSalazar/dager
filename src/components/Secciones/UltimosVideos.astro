@@ -1,32 +1,34 @@
 ---
-import CardVideo from './CardVideo.astro';
-import Title from './Title.astro';
-import Youtube from './Youtube.astro';
+import CardVideo from '../CardVideo.astro';
+import Title from '../Title.astro';
 const videos = [
   {
     'link': 'https://www.youtube.com/embed/YQfRVo5UwOM',
     'titulo': 'Cómo estudiar (pero bien).',
-    'canal': 'Dot Dager'
+    'canal': 'Dot Dager',
+    'link_canal': 'https://www.youtube.com/@DotDager'
   },
   {
     'link': 'https://www.youtube.com/embed/FMfLfYus6Yc',
     'titulo': 'No seas tan programador.',
-    'canal': 'Dot Dager'
+    'canal': 'Dot Dager',
+    'link_canal': 'https://www.youtube.com/@DotDager'
   },
   {
     'link': 'https://www.youtube.com/embed/wE8JU_tN04Q',
     'titulo': 'Forobardo de la semana: "Los recruiters ganan 10 veces mas que un programador."',
-    'canal': 'Dot Dager'
+    'canal': 'Dot Dager',
+    'link_canal': 'https://www.youtube.com/@DotDager'
   },
 ]
 ---
 
-<section class="bg-firstColor w-screen px-5 md:px-28 lg:px-32 xl:px-60 pt-20 ">
+<section id="ultimosvideos-section" class="bg-firstColor w-screen px-5 md:px-28 lg:px-32 xl:px-60 pt-20 ">
   <Title titulo="últimos vídeos" color="text-white" size="text-4xl" />
   <div class="flex justify-between flex-wrap flex-col md:flex-row">
     {
       videos.map( (video) => (
-        <CardVideo link={video.link} titulo={video.titulo} canal={video.canal}/>
+        <CardVideo link={video.link} titulo={video.titulo} canal={video.canal} link_canal={video.link_canal}/>
       ))
     }
   </div>

@@ -1,0 +1,106 @@
+---
+import Instagram from "../Redes/Instagram.astro";
+import Linkedin from "../Redes/Linkedin.astro";
+import Twitter from "../Redes/Twitter.astro";
+import Title from "../Title.astro";
+---
+
+<section id="contacto-section" class="w-screen relative flex">
+  <aside
+    class="w-screen md:w-[50%] bg-thirdColor px-5 pt-5 md:pl-40 lg:pl-60 md:pt-10 pb-5"
+  >
+    <header class="relative flex items-center">
+      <Title titulo="Contacto" color="text-firstColor" size="text-6xl" />
+      <p
+        class="absolute bottom-7 text-xs font-bebas text-firstColor tracking-[0.1px] z-20 left-[2px]"
+      >
+        después veo si te respondo, abrazo máquina!
+      </p>
+    </header>
+    <form
+      action=""
+      class="flex flex-col gap-5 [&>div>input]:outline-none [&>div>input]:max-w-[600px] [&>div>input]:rounded-none"
+    >
+      <div class="flex flex-col">
+        <label for="Nombre" class="font-bebas text-2xl text-firstColor"
+          >Nombre completo</label
+        >
+        <input
+          type="text"
+          name="Nombre"
+          id=""
+          placeholder="Alberto Fernandez"
+          class="p-2 bg-transparent border-[1px] border-firstColor placeholder:text-firstColor/25 font-extralight"
+        />
+      </div>
+
+      <div class="flex flex-col">
+        <label for="Email" class="font-bebas text-2xl text-firstColor"
+          >Email</label
+        >
+        <input
+          type="email"
+          name="Email"
+          id=""
+          placeholder="BetoGoloson@gmail.com"
+          class="p-2 bg-transparent border-[1px] border-firstColor placeholder:text-firstColor/25 font-extralight"
+        />
+      </div>
+      <div class="flex flex-col">
+        <label for="Mensaje" class="font-bebas text-2xl text-firstColor"
+          >Mensaje</label
+        >
+        <textarea
+          name="Mensaje"
+          id=""
+          placeholder="Hola, mi nombre es Alberto y me quiero comunicar por un combo SashaFerro-Diaz..."
+          class="p-2 bg-transparent border-[1px] border-firstColor placeholder:text-firstColor/25 font-extralight min-h-52 text-start outline-none max-w-[600px]"
+        ></textarea>
+      </div>
+      <button
+        onsubmit="submit"
+        class="bg-firstColor text-white text-center font-bebas py-1 text-2xl max-w-[600px] hover:opacity-75 active:opacity-50 transition-opacity duration-200"
+      >
+        Enviar
+      </button>
+    </form>
+    <footer>
+      <h3 class="text-firstColor font-bebas text-2xl pt-5">
+        Mis redes sociales
+      </h3>
+      <div
+        class="flex flex-col md:flex-row md:text-xl gap-3 md:gap-5 font-bebas text-lg [&>a>svg]:relative [&>a>svg]:bottom-[2px] pt-3"
+      >
+        <a
+          href="https://www.instagram.com/dager.32/"
+          target="_blank"
+          class="flex gap-2 items-center hover:opacity-75 active:opacity-50 w-fit"
+          ><Instagram ancho="18" alto="18" />Mariano Villa</a
+        >
+        <a
+          href="https://x.com/Dager_32"
+          target="_blank"
+          class="flex gap-2 items-center hover:opacity-75 active:opacity-50 w-fit"
+          ><Twitter ancho="18" alto="18" />Dager_32</a
+        >
+        <a
+          href="https://www.linkedin.com/in/mariano-luis-villa"
+          target="_blank"
+          class="flex gap-2 items-center hover:opacity-75 active:opacity-50 w-fit"
+          ><Linkedin ancho="18" alto="18" />Mariano Villa</a
+        >
+      </div>
+    </footer>
+  </aside>
+  <aside
+    class="w-[50%] bg-firstColor bg-dager bg-no-repeat bg-cover hidden md:block"
+  >
+    <h3 class="p-10 text-white/50 text-xl">onlyfans.com/elñinodager</h3>
+  </aside>
+</section>
+
+<style>
+  textarea {
+    resize: none;
+  }
+</style>

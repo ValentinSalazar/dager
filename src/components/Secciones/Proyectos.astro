@@ -1,34 +1,37 @@
 ---
-import CardVideo from './CardVideo.astro';
-import Title from './Title.astro';
+import CardVideo from '../CardVideo.astro';
+import Title from '../Title.astro';
 
 const proyectos = [
   {
     'link': 'https://www.youtube.com/embed/Up3kE_jXyZ4',
     'titulo': 'Dager te enseña a hacer un server DNS.',
-    'canal': 'Dager Clips'
+    'canal': 'Dager Clips',
+    'link_canal': 'https://www.youtube.com/@DagerLive'
   },
   {
     'link': 'https://www.youtube.com/embed/hnXqEU51Efg',
     'titulo': 'El "Hola Mundo" más dificil del mundo.',
-    'canal': 'Dager Clips'
+    'canal': 'Dager Clips',
+    'link_canal': 'https://www.youtube.com/@DagerLive'
   },
   {
     'link': 'https://www.youtube.com/embed/OnNW8dbHFno',
     'titulo': 'Programando pero solamente puedo usar tecnologías con A | AAAA stack 1',
-    'canal': 'Dager Clips'
+    'canal': 'Dager Clips',
+    'link_canal': 'https://www.youtube.com/@DagerLive'
   },
 ]
 
 ---
 
 
-<section class="bg-firstColor w-screen px-5 md:px-28 lg:px-32 xl:px-60 pt-20">
+<section id="proyectos-section" class="bg-firstColor w-screen px-5 md:px-28 lg:px-32 xl:px-60 py-20">
   <Title titulo="Proyectos en vivo" color="text-white" size="text-4xl" />
   <div class="flex justify-between gap-14 md:gap-0 flex-wrap flex-col md:flex-row">
     {
       proyectos.map( (proyecto) => (
-        <CardVideo link={proyecto.link} titulo={proyecto.titulo} canal={proyecto.canal}/>
+        <CardVideo link={proyecto.link} titulo={proyecto.titulo} canal={proyecto.canal} link_canal={proyecto.link_canal}/>
       ))
     }
 </section>

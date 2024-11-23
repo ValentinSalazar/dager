@@ -1,6 +1,6 @@
 ---
-const { link, titulo, canal } = Astro.props;
-import Youtube from "./Youtube.astro";
+const { link, titulo, canal, link_canal } = Astro.props;
+import Youtube from "./Redes/Youtube.astro";
 ---
 
 <article>
@@ -13,7 +13,8 @@ import Youtube from "./Youtube.astro";
         {titulo}
     </h1>
     <a
-        href="https://www.youtube.com/@DagerLive"
+        href=`${link_canal}`
+        target="_blank"
         class="text-white font-bebas p-2 flex items-center gap-2 w-fit hover:opacity-75 active:opacity-50 transition-opacity duration-200"
         ><Youtube ancho="32" alto="20" />{canal}</a
     >
