@@ -1,0 +1,136 @@
+---
+import Instagram from "./Redes/Instagram.astro";
+import Linkedin from "./Redes/Linkedin.astro";
+import Twitter from "./Redes/Twitter.astro";
+import Youtube from "./Redes/Youtube.astro";
+---
+
+<nav
+    id="menu_mobile"
+    class="left-0 top-0 h-screen z-[99] fixed w-screen hidden"
+>
+    <div
+        id="blur_menu"
+        class="w-[50%] md:w-[70%] lg:w-[80%] bg-firstColor/80 z-50"
+    >
+    </div>
+    <ul
+        id=""
+        class="pt-14 w-[50%] md:w-[30%] lg:w-[20%] bg-firstColor relative md:pt-20 text-end px-5 flex flex-col gap-3"
+    >
+        <li class="self-end">
+            <button
+                id="cerrar_menu_mobile"
+                class="flex justify-end relative pb-5 hover:opacity-75 active:opacity-50 transition-opacity duration-200"
+            >
+                <span class="w-8 h-1 bg-white inline-block rotate-45 absolute"
+                ></span>
+                <span
+                    class="w-8 h-1 bg-white inline-block rotate-[-45deg] absolute"
+                ></span>
+            </button>
+        </li>
+        <li>
+            <a
+                href="#main-section"
+                id="menu_mobile_link"
+                class="hover:opacity-75 active:opacity-50 transition-opacity duration-200"
+                >Inicio</a>
+        </li>
+        <li>
+            <a
+                href="#sobremi-section"
+                id="menu_mobile_link"
+                class="hover:opacity-75 active:opacity-50 transition-opacity duration-200"
+                >Sobre mi</a>
+        </li>
+        <li>
+            <a
+                href="#ultimosvideos-section"
+                id="menu_mobile_link"
+                class="hover:opacity-75 active:opacity-50 transition-opacity duration-200"
+                >Contenido</a>
+        </li>
+        <li>
+            <a
+                href="#contacto-section"
+                id="menu_mobile_link"
+                class="hover:opacity-75 active:opacity-50 transition-opacity duration-200"
+                >Contacto</a>
+        </li>
+        <li class="flex justify-end">
+            <a
+                href="/lumberjack"
+                target="_blank"
+                class="hover:opacity-75 transition-opacity"
+            >
+                <h3 class="absolute text-secondColor">lumberjack</h3>
+                <h3 class="relative right-[2px] bottom-[2px] text-white/30">
+                    lumberjack
+                </h3>
+            </a>
+        </li>
+        <hr class="w-full sm:w-[50%] self-end" />
+        <ul class="flex gap-3 self-end">
+            <a
+                href="https://www.instagram.com/dager.32"
+                target="_blank"
+                class="hover:opacity-75 active:opacity-50 transition-opacity duration-200"
+            >
+                <Instagram ancho="24" alto="24" />
+            </a>
+            <a
+                href="https://www.linkedin.com/in/mariano-luis-villa"
+                target="_blank"
+                class="hover:opacity-75 active:opacity-50 transition-opacity duration-200"
+            >
+                <Linkedin ancho="24" alto="24" />
+            </a>
+            <a
+                href="https://x.com/Dager_32"
+                target="_blank"
+                class="hover:opacity-75 active:opacity-50 transition-opacity duration-200"
+            >
+                <Twitter ancho="24" alto="24" color="white" />
+            </a>
+            <a
+                href="https://www.youtube.com/@DotDager"
+                target="_blank"
+                class="hover:opacity-75 active:opacity-50 transition-opacity duration-200"
+            >
+                <Youtube ancho="28" alto="24" />
+            </a>
+        </ul>
+    </ul>
+</nav>
+
+<script>
+    const menu_mobile = document.querySelector("#menu_mobile");
+    const cerrar_menu_mobile = document.querySelector("#cerrar_menu_mobile");
+    const blur_menu = document.querySelector("#blur_menu");
+    const menu = document.querySelector("#menu");
+    const menu_mobile_links = document.querySelectorAll("#menu_mobile_link");
+
+    menu.addEventListener("click", () => {
+        menu_mobile.classList.remove("hidden");
+        menu_mobile.classList.add("flex");
+        blur_menu.classList.remove("hidden");
+    });
+
+    cerrar_menu_mobile.addEventListener("click", () => {
+        menu_mobile.classList.toggle("hidden");
+        blur_menu.classList.add("hidden");
+    });
+
+    blur_menu.addEventListener("click", () => {
+        menu_mobile.classList.toggle("hidden");
+        blur_menu.classList.toggle("hidden");
+    });
+
+    for (let i = 0; i < menu_mobile_links.length; i++) {
+        menu_mobile_links[i].addEventListener("click", () => {
+            menu_mobile.classList.toggle("hidden");
+            blur_menu.classList.add("hidden");
+        });
+    }
+</script>

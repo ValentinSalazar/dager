@@ -1,5 +1,6 @@
 ---
 import Menu from './Menu.astro';
+import NavMobile from './NavMobile.astro';
 ---
 
 <nav
@@ -25,17 +26,11 @@ import Menu from './Menu.astro';
       </a>
     </li>
   </ul>
+  <NavMobile />
   <button class="lg:hidden">
     <Menu />
   </button>
 </nav>
-
-<script>
-  const menu = document.querySelector('#menu');
-  menu.addEventListener('click', () => {
-    alert('hola');
-  });
-</script>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
