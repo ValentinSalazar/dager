@@ -58,6 +58,7 @@ import Title from "../Title.astro";
         ></textarea>
       </div>
       <button
+      id="boton_enviar"
         onsubmit="submit"
         class="bg-firstColor text-white text-center font-bebas py-1 text-2xl max-w-[600px] hover:opacity-75 active:opacity-50 transition-opacity duration-200"
       >
@@ -74,7 +75,7 @@ import Title from "../Title.astro";
         <a
           href="https://www.instagram.com/dager.32"
           target="_blank"
-          class="flex gap-2 items-center hover:opacity-75 active:opacity-50 w-fit"><Instagram ancho="18" alto="18" />Mariano Villa</a>
+          class="flex gap-2 items-center hover:opacity-75 active:opacity-50 w-fit"><Instagram ancho="18" alto="18" />Dager.32</a>
         <a
           href="https://x.com/Dager_32"
           target="_blank"
@@ -97,8 +98,17 @@ import Title from "../Title.astro";
   </aside>
 </section>
 
+<script>
+  const boton_enviar = document.querySelector('#boton_enviar');
+  boton_enviar.addEventListener('click', (e) => {
+    e.preventDefault();
+    alert('No anda el formulario. Va, no se capaz que si. Despues vemos.');
+  });
+</script>
+
 <style>
   textarea {
     resize: none;
   }
 </style>
+
