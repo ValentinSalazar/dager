@@ -4,7 +4,7 @@ import NavMobile from './NavMobile.astro';
 ---
 
 <nav
-  class="absolute px-5 pt-10 md:px-24 lg:px-32 xl:px-60 md:pt-20 w-screen flex justify-between items-center text-3xl text-white">
+  class="fixed md:bg-none md:absolute z-50 px-5 pt-10 md:px-24 lg:px-32 xl:px-60 md:pt-20 w-screen flex justify-between items-center text-3xl text-white">
   <a href="/" class=""><span class="text-secondColor">.</span>dagger</a>
   <ul class="gap-5 hidden lg:flex">
     <li>
@@ -20,17 +20,39 @@ import NavMobile from './NavMobile.astro';
       <a href="#contacto-section" class="hover:opacity-75 transition-opacity">contacto</a>
     </li>
     <li>
-      <a href="/lumberjack" target="_blank" class="hover:opacity-75 transition-opacity">
+      <a href="/lumberjack" target="_blank" class="group transition">
         <h3 class="absolute text-secondColor">lumberjack</h3>
-        <h3 class="relative right-[2px] bottom-[2px] text-white/30">lumberjack</h3>
+        <h3 class="relative right-[2px] bottom-[2px] text-white/30 duration-200 group-hover:right-0 group-hover:bottom-0">
+          lumberjack
+        </h3>
       </a>
     </li>
+    
+    
   </ul>
   <NavMobile />
   <button class="lg:hidden">
     <Menu />
   </button>
 </nav>
+
+<script>
+  const nav = document.querySelector('nav');
+  const boton_volver_arriba = document.querySelector('#boton_volver_arriba');
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 108){
+      nav.classList.add('backdrop-blur');
+      nav.classList.add('pb-5');
+      boton_volver_arriba.classList.remove('hidden');
+      boton_volver_arriba.classList.add('flex');
+    } else {
+      nav.classList.remove('backdrop-blur');
+      nav.classList.remove('pb-5');
+      boton_volver_arriba.classList.add('hidden');
+      boton_volver_arriba.classList.remove('flex');
+    }
+  });
+</script>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');

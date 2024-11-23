@@ -1,0 +1,15 @@
+---
+import Flecha from "./Flecha.astro";
+---
+
+<button id="boton_volver_arriba" class="p-2 h-8 w-8 border-[1px] md:fixed hidden right-5 bottom-5 z-50 flex items-center justify-center hover:bg-white group group-hover:opacity-75 group-hover:active-50 transition duration-200">
+    <Flecha />
+</button>
+
+<script>
+    const boton_volver_arriba = document.querySelector('#boton_volver_arriba');
+
+    boton_volver_arriba.addEventListener('click', () => {
+        window.scrollTo(0,0);
+    });
+</script>
